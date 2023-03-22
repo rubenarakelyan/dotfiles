@@ -13,8 +13,8 @@ config_git_push=false
 config_autoindent=true
 
 config_file_rss="rss.xml"
-config_gopher_name="wackomenace"
-config_gopher_desc="The Telex - Ruben's Phlog"
+config_gopher_name="The Telex"
+config_gopher_desc="Ruben's Phlog"
 config_rss_num_entries="10"
 config_phlog_autorss=true
 
