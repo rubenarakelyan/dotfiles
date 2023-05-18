@@ -6,6 +6,9 @@
   email = ruben@arakelyan.uk
   signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBL27dTJB2yGXQQ6btZzwY/VbWtSknbY2GqAh8YKdb+/
 
+[init]
+  defaultBranch = main
+
 [gpg]
   format = ssh
 
