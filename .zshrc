@@ -4,11 +4,6 @@ export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/libpq/lib/pkgconfig"
 export EDITOR="nano"
 
-alias cosup="cd ~/GitHub/cosmetic-product-notifications/cosmetics-web && nvm use 18.13 && docker compose up -d db opensearch redis && bin/dev"
-alias cosdown="cd ~/GitHub/cosmetic-product-notifications/cosmetics-web && docker compose down && cd -"
-alias psdup="cd ~/GitHub/product-safety-database && nvm use 18.15 && docker compose up -d db antivirus opensearch redis && bin/dev"
-alias psddown="cd ~/GitHub/product-safety-database && docker compose down && cd -"
-
 eval "$(rbenv init - zsh)"
 
 export NVM_DIR="$HOME/.nvm"
