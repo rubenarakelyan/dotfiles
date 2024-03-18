@@ -1,7 +1,9 @@
-export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+export PATH="/opt/homebrew/opt/libpq/bin:$HOME/dotnet:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/libpq/lib/pkgconfig"
+export DOTNET_ROOT=$HOME/dotnet
+
 export EDITOR="nano"
 
 eval "$(rbenv init - zsh)"
