@@ -1,19 +1,15 @@
 [core]
-  editor = /usr/local/bin/nova open --wait
+  editor = code --wait
 
 [user]
   name = Ruben Arakelyan
   email = ruben@arakelyan.uk
-  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBL27dTJB2yGXQQ6btZzwY/VbWtSknbY2GqAh8YKdb+/
 
 [init]
   defaultBranch = main
 
 [gpg]
-  format = ssh
-
-[gpg "ssh"]
-  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+  program = /usr/local/MacGPG2/bin/gpg
 
 [commit]
   gpgsign = true
@@ -25,20 +21,20 @@
   branch = yellow black bold ul
 
 [diff]
-  tool = Kaleidoscope
+  tool = VSCode
 
-[difftool "Kaleidoscope"]
-  cmd = /usr/local/bin/ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool "VSCode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+  trustExitCode = true
 
 [difftool]
   prompt = false
-  trustExitCode = true
 
 [merge]
-  tool = Kaleidoscope
+  tool = VSCode
 
-[mergetool "Kaleidoscope"]
-  cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+[mergetool "VSCode"]
+  cmd = code --wait $MERGED
   trustExitCode = true
 
 [mergetool]
