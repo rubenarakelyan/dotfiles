@@ -1,5 +1,5 @@
 [core]
-  editor = /usr/local/bin/nova open --wait
+  editor = bbedit --wait
 
 [user]
   name = Ruben Arakelyan
@@ -21,20 +21,20 @@
   branch = yellow black bold ul
 
 [diff]
-  tool = Kaleidoscope
+  tool = bbedit
 
-[difftool "Kaleidoscope"]
-  cmd = /usr/local/bin/ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool "bbedit"]
+  cmd = bbedit --wait --resume "$LOCAL" "$REMOTE"
   trustExitCode = true
 
 [difftool]
   prompt = false
 
 [merge]
-  tool = Kaleidoscope
+  tool = bbedit
 
-[mergetool "Kaleidoscope"]
-  cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+[mergetool "bbedit"]
+  cmd = bbedit --wait --resume "$LOCAL" "$MERGED" "$REMOTE"
   trustExitCode = true
 
 [mergetool]
